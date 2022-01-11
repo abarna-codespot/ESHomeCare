@@ -1,0 +1,103 @@
+$mainColor:#fd6768;
+$background-color: #e7dad9;
+
+.login-page{
+    width: 100vw;
+    height: 100vh;
+    background-color: $background-color;
+}
+.wrapper {
+    max-width: 500px;
+    min-height: 100vh;
+    margin: auto;
+    padding: 40px 30px 30px 30px;
+    background-color: $background-color;
+    border-radius: 15px;
+    form{
+        padding-top: 10%;
+    }
+}
+
+.logo {
+    width: 80%;
+    margin: 20% auto;
+    
+}
+
+.logo img {
+    width: 100%;
+    height: 80px;
+}
+
+.wrapper .form-field input {
+    width: 100%;
+    height: 50px;
+    display: block;
+    border: none;
+    outline: none;
+    background: #fff;
+    font-size: 1rem;
+    color: $mainColor;
+    padding: 10px 15px 10px 10px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    &::placeholder{
+        color: $mainColor;
+    }
+}
+
+.wrapper .form-field {
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.wrapper .form-field .fas {
+    color: #555
+}
+
+.wrapper .btn {
+    box-shadow: none;
+    width: 50%;
+    height: 60px;
+    background-color: $mainColor;
+    color: #fff;
+    border-radius: 10px;
+    letter-spacing: 1.3px;
+    margin: 20% 0;
+    font-weight: bold;
+}
+
+.wrapper .btn:hover {
+    background-color: #fff;
+    color:$mainColor
+}
+
+.wrapper a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #03A9F4
+}
+
+.wrapper a:hover {
+    color: $mainColor
+}
+.footer{
+    position: relative;
+    a{
+        color: black;
+    }
+    a:nth-of-type(2){
+        position: absolute;
+        left: 90%;
+    }
+}
+
+@media(max-width: 380px) {
+    .wrapper {
+        margin: 0;
+        width: 100%;
+        min-height: 100vh;
+    }
+}
