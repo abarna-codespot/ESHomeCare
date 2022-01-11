@@ -1,0 +1,52 @@
+$mainColor:#fd6768;
+$background-color: #e7dad9;
+
+.btn{
+    color: $mainColor;
+    background-color: #fff;
+    border: 0;
+    margin: 20px;
+    font-weight: bold;
+    width: 250px;
+    height: 70px;
+    border-radius: 10px;
+    &:hover{
+        color: #fff;
+        background-color: $mainColor;
+    }
+    &:focus{
+      border: 0;
+    }
+}
+.btnSelect{
+  color: #fff;
+  background-color: $mainColor;
+}
+.form-button{
+  height: 40px;
+  width: 100px;
+  margin-left: 100px;
+}
+.main_page{
+    background-color: $background-color;
+    display: flex;
+    min-height: calc(#{100vh} - #{80px});
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    .main_page_buttons{
+        button{
+            display: inline-block;
+        }
+    }
+}
+@media(max-width: 600px){
+  .main_page_buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+}

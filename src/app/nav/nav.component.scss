@@ -1,0 +1,56 @@
+
+$navColor:#f0abac;
+nav{
+    width: 100vw;
+    background-color: $navColor;
+    div{
+        display: inline-block;
+    }
+    img{
+        height: 60px;
+        margin: 10px;
+    }
+    .logo,.profile_img,.search{
+        img{
+            width: 60px;
+        }
+    }
+    .profile_img{
+        img{
+            border-radius: 50%;
+        }
+    }
+    #company_name{
+        img{
+            width: 100%;
+        }
+       position: absolute;
+       left: 50%;
+       transform:translateX(-60%);
+    }
+    .right_menu{
+        position: absolute;
+        right: 20px;
+    }
+
+}
+@media(max-width: 600px){
+    nav{
+        img{
+            height: 45px;
+            width: 45px !important;
+            margin: 12px 2px    ;
+        }
+        #company_name{
+            img{
+
+                width: 150px !important;
+            }
+        }
+        .right_menu{
+            position: absolute;
+            right: 30px;
+        }
+    }
+}
+

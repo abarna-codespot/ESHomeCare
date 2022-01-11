@@ -1,0 +1,106 @@
+<app-nav></app-nav>
+<div class="Employee-list-page">
+  <div class="heading">
+<div class="container">
+  <div class="row">
+    <h2 class="mt-10 col-lg-4 col-sm-12">EMPLOYEES</h2>
+    <div class="alphabets col-lg-8 col-sm-12">
+      <span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span><span>H</span><span>I</span><span>J</span>
+      <span>K</span><span>L</span><span>M</span><span>N</span><span>O</span><span>P</span><span>Q</span><span>R</span><span>S</span><span>T</span>
+      <span>U</span><span>V</span><span>W</span><span>X</span><span>Y</span><span>Z</span>
+    </div>
+  </div>
+</div>
+    
+  </div>
+
+
+    <form action="">
+        <div class="container">
+            <div class="row">
+                <div class="form-container">
+                    
+                    <div class="form_element">
+                        <label for="firstname">Type</label>
+                        <input type="text" id="firstname" name="firstname">
+                    </div>
+                    
+                    <div class="form_element">
+                        <label for="firstname">Status</label>
+                        <input type="text" id="firstname" name="firstname">
+                    </div>
+                    <div class="form_element">
+                        <label for="firstname">Employee Type</label>
+                        <input type="text" id="firstname" name="firstname">
+                    </div>
+                    <div class="form_element">
+                        <label for="firstname">Phone</label>
+                        <input type="text" id="firstname" name="firstname">
+                    </div>
+                    <div class="form_element">
+                        <label for="firstname">Email</label>
+                        <input type="text" id="firstname" name="firstname">
+                    </div>
+                    <button (click)="onClickCreateEmployee()">
+                        New Employee
+                    </button>
+                </div>
+                </div>
+                </div>
+                </form>
+          <div class="table-wrapper">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+              <!-- Position Column -->
+              <ng-container matColumnDef="empName">
+                <th mat-header-cell *matHeaderCellDef>Name</th>
+                <td mat-cell *matCellDef="let element">{{element.empName}}</td>
+              </ng-container>
+            
+              <!-- Name Column -->
+              <ng-container matColumnDef="type">
+                <th mat-header-cell *matHeaderCellDef>Type</th>
+                <td mat-cell *matCellDef="let element">{{element.type}}</td>
+              </ng-container>
+            
+              <!-- Weight Column -->
+              <ng-container matColumnDef="schedule">
+                  <th mat-header-cell *matHeaderCellDef>Schedule</th>
+                  <td mat-cell *matCellDef="let element">{{element.schedule}}</td>
+                </ng-container>
+                <ng-container matColumnDef="phone">
+                  <th mat-header-cell *matHeaderCellDef>Phone</th>
+                  <td mat-cell *matCellDef="let element">{{element.phone}}</td>
+                </ng-container>
+          
+                <ng-container matColumnDef="email">
+                  <th mat-header-cell *matHeaderCellDef>Email</th>
+                  <td mat-cell *matCellDef="let element">{{element.email}}</td>
+                </ng-container>
+                <ng-container matColumnDef="medical">
+                  <th mat-header-cell *matHeaderCellDef>Medical</th>
+                  <td mat-cell *matCellDef="let element">{{element.medical}}</td>
+                </ng-container>
+                <ng-container matColumnDef="dob">
+                  <th mat-header-cell *matHeaderCellDef>DOB</th>
+                  <td mat-cell *matCellDef="let element">{{element.dob}}</td>
+                </ng-container>
+                <ng-container matColumnDef="status">
+                  <th mat-header-cell *matHeaderCellDef>Status</th>
+                  <td mat-cell *matCellDef="let element">{{element.Status}}</td>
+                </ng-container>
+                <ng-container matColumnDef="coordinator">
+                  <th mat-header-cell *matHeaderCellDef>Coordinator</th>
+                  <td mat-cell *matCellDef="let element">{{element.coordinator}}</td>
+                </ng-container>
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr
+                  mat-row
+                  (click)="clickedRows.add(row)"
+                  [class.demo-row-is-clicked]="clickedRows.has(row)"
+                  *matRowDef="let row; columns: displayedColumns;"
+              ></tr>
+            </table>
+          
+          </div>
+    
+</div>
